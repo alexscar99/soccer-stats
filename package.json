@@ -1,0 +1,26 @@
+{
+    "name": "soccer-stats",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start:build": "tsc -w",
+        "start:run": "nodemon build/index.js",
+        "start": "concurrently npm:start:*"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alexscar99/soccer-stats.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alexscar99/soccer-stats/issues"
+    },
+    "homepage": "https://github.com/alexscar99/soccer-stats#readme",
+    "dependencies": {
+        "concurrently": "^4.1.1",
+        "nodemon": "^1.19.1"
+    }
+}
