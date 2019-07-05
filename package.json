@@ -20,6 +20,7 @@
     },
     "homepage": "https://github.com/alexscar99/soccer-stats#readme",
     "dependencies": {
+        "@types/node": "^12.0.12",
         "concurrently": "^4.1.1",
         "nodemon": "^1.19.1"
     }
