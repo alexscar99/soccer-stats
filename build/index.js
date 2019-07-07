@@ -2,9 +2,14 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var MatchReader_1 = require("./MatchReader");
 var CsvFileReader_1 = require("./CsvFileReader");
-// create an object that satisfies the 'DataReader' interface
+var WinsAnalysis_1 = require("./analyzers/WinsAnalysis");
+var Summary_1 = require("./Summary");
+var HtmlReport_1 = require("./reportTargets/HtmlReport");
+// Create an object that satisfies the 'DataReader' interface
 var csvFileReader = new CsvFileReader_1.CsvFileReader('soccer.csv');
-// create an instance of 'MatchReader' and pass in something
+// Create an instance of 'MatchReader' and pass in something
 // satisfying the 'DataReader' interface
 var matchReader = new MatchReader_1.MatchReader(csvFileReader);
 matchReader.load();
+var summary = new Summary_1.Summary(new WinsAnalysis_1.WinsAnalysis('Tottenham'), new HtmlReport_1.HtmlReport());
+summary.buildAndPrintReport(matchReader.matches);
